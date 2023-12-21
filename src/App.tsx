@@ -11,6 +11,7 @@ import servicesGridCards from './data/card-items';
 import Card from "./card/card";
 import style from "./card/card.module.scss";
 import downArrow from './assets/images/ic_down_arrow.svg';
+import Reviews from "./reviews/reviews";
 
 function App() {
 
@@ -73,6 +74,7 @@ function App() {
           </div>
         }
         illustration={illustration_third} />
+        <Reviews/>
     </>
 
   );
