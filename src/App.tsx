@@ -5,9 +5,12 @@ import Banner from "./banner/banner";
 import Button from "./button/button";
 import illustration from './assets/images/ic_first_banner.png';
 import illustration_second from './assets/images/ic_second_banner.png';
+import illustration_third from './assets/images/ic_third_banner.png';
 import CardScreen from "./cardsScreen/cardsScreen";
 import servicesGridCards from './data/card-items';
 import Card from "./card/card";
+import style from "./card/card.module.scss";
+import downArrow from './assets/images/ic_down_arrow.svg';
 
 function App() {
 
@@ -41,16 +44,35 @@ function App() {
         }
       </CardScreen>
       <Banner
-                separator={true}
-                type='reverse'
-                title='Leading healthcare providers'
-                content='We provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver'
-                button={
-                    <div style={{paddingTop: '40px'}}>
-                        <Button text="Learn more"/>
-                    </div>
-                }
-                illustration={illustration_second}/>
+        separator={true}
+        type='reverse'
+        title='Leading healthcare providers'
+        content='We provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver'
+        button={
+          <div style={{ paddingTop: '40px' }}>
+            <Button text="Learn more" />
+          </div>
+        }
+        illustration={illustration_second} />
+
+      <Banner
+        separator={true}
+        title='Download our mobile apps'
+        content='Our dedicated patient engagement app and
+        web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely'
+        button={
+          <div style={{ paddingTop: '20px' }}>
+            <Button text='Download' content={
+              <img className={style.img}
+                src={downArrow}
+                width={15}
+                height={15}
+                alt='arrow-down'
+              />
+            } />
+          </div>
+        }
+        illustration={illustration_third} />
     </>
 
   );
