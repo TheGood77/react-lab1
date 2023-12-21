@@ -4,6 +4,7 @@ import navigationItems from './data/navigation-items';
 import Banner from "./banner/banner";
 import Button from "./button/button";
 import illustration from './assets/images/ic_first_banner.png';
+import illustration_second from './assets/images/ic_second_banner.png';
 import CardScreen from "./cardsScreen/cardsScreen";
 import servicesGridCards from './data/card-items';
 import Card from "./card/card";
@@ -39,6 +40,17 @@ function App() {
           })
         }
       </CardScreen>
+      <Banner
+                separator={true}
+                type='reverse'
+                title='Leading healthcare providers'
+                content='We provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver'
+                button={
+                    <div style={{paddingTop: '40px'}}>
+                        <Button text="Learn more"/>
+                    </div>
+                }
+                illustration={illustration_second}/>
     </>
 
   );
