@@ -28,6 +28,3 @@ npm run dev
 | <img src="src/assets/screenshots/fifth_screenshot.webp" height="400">   | 
 | <img src="src/assets/screenshots/sixth_screenshot.webp" height="400">   |
 | <img src="src/assets/screenshots/seventh_screenshot.webp" height="400"> | 
-
-## Github pages
-* Add later
