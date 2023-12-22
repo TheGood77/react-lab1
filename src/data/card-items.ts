@@ -6,6 +6,11 @@ import consultation from "../assets/images/ic_consultation.svg";
 import details from "../assets/images/ic_details.svg";
 import emergency from "../assets/images/ic_emergency.svg";
 import tracking from "../assets/images/ic_tracking.svg";
+import image_first_article from "../assets/images/ic_first_article.png";
+import image_second_article from "../assets/images/ic_second_article.png";
+import image_third_article from "../assets/images/ic_third_article.png";
+import React from 'react';
+
 
 interface CardItem {
     image: string,
@@ -47,4 +52,28 @@ const servicesGridCards: CardItem[] = [
     },
 ];
 
-export default servicesGridCards;
+const articlesGridCards: CardItem[] = [
+    {
+        image: image_first_article,
+        title: 'Disease detection, check up in the laboratory',
+        description: 'In this case, the role of the health laboratory is very important to do a disease detection...',
+        button: React.createElement('a', { href: '#!' }, 'Read more'),
+    },
+    {
+        image: image_second_article,
+        title: 'Herbal medicines that are safe for consumption',
+        description: 'Herbal medicine is very widely used at this time because of its very good for your health...',
+        button: React.createElement('a', { href: '#!' }, 'Read more'),
+    },
+    {
+        image: image_third_article,
+        title: 'Natural care for healthy facial skin',
+        description: 'A healthy lifestyle should start from now and also for your skin health. There are some...',
+        button: React.createElement('a', { href: '#!' }, 'Read more'),
+    }
+];
+
+
+
+
+export {servicesGridCards, articlesGridCards};

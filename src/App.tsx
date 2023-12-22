@@ -7,13 +7,34 @@ import illustration from './assets/images/ic_first_banner.png';
 import illustration_second from './assets/images/ic_second_banner.png';
 import illustration_third from './assets/images/ic_third_banner.png';
 import CardScreen from "./cardsScreen/cardsScreen";
-import servicesGridCards from './data/card-items';
+import { servicesGridCards } from './data/card-items';
+import { articlesGridCards } from './data/card-items';
 import Card from "./card/card";
 import style from "./card/card.module.scss";
 import downArrow from './assets/images/ic_down_arrow.svg';
 import Reviews from "./reviews/reviews";
+import { useState } from "react";
+import rightArrow from './assets/images/ic_right_arrow.svg';
 
 function App() {
+  const [showAdditionalCards, setShowAdditionalCards] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowAdditionalCards(!showAdditionalCards);
+  }
+
+  const cards = articlesGridCards.map((item, index) => {
+    return <Card
+      key={`article_card_${index}`}
+      image={item.image}
+      imageFull={true}
+      title={item.title}
+      description={item.description}
+      button={item.button}
+      arrowButton={rightArrow}
+    />
+  })
+
 
   return (
     <>
@@ -74,7 +95,22 @@ function App() {
           </div>
         }
         illustration={illustration_third} />
-        <Reviews/>
+      <Reviews />
+      {
+        <div>
+          <CardScreen
+            type='right'
+            title='Check out our latest article'
+            children={showAdditionalCards ? [cards, cards] : cards}
+            button={
+              <Button
+                text={showAdditionalCards ? 'Hide' : 'View all'}
+                onClick={handleButtonClick}
+              />
+            }
+          />
+        </div>
+      }
     </>
 
   );
