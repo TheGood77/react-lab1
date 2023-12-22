@@ -1,4 +1,4 @@
-// import React, {useState} from "react";
+import { useState } from "react";
 import { Navigation } from "./header/navbar";
 import navigationItems from './data/navigation-items';
 import Banner from "./banner/banner";
@@ -8,13 +8,13 @@ import illustration_second from './assets/images/ic_second_banner.png';
 import illustration_third from './assets/images/ic_third_banner.png';
 import CardScreen from "./cardsScreen/cardsScreen";
 import { servicesGridCards } from './data/card-items';
-import { articlesGridCards } from './data/card-items';
 import Card from "./card/card";
 import style from "./card/card.module.scss";
 import downArrow from './assets/images/ic_down_arrow.svg';
 import Reviews from "./reviews/reviews";
-import { useState } from "react";
+import { articlesGridCards } from './data/card-items';
 import rightArrow from './assets/images/ic_right_arrow.svg';
+import Footer from "./footer/footer";
 
 function App() {
   const [showAdditionalCards, setShowAdditionalCards] = useState(false);
@@ -39,7 +39,6 @@ function App() {
   return (
     <>
       <Navigation
-        logoText='HealthCare'
         items={navigationItems} />
       <Banner
         title='Virtual healthcare for you'
@@ -111,8 +110,8 @@ function App() {
           />
         </div>
       }
+      <Footer />
     </>
-
   );
 }
 
