@@ -1,5 +1,5 @@
 import styles from './banner.module.scss';
-import {ReactElement} from 'react';
+import { ReactElement } from 'react';
 import dots from '../assets/images/ic_dots.svg';
 
 const Banner = (props: {
@@ -16,7 +16,7 @@ const Banner = (props: {
             <div className={styles.title}>{props.title}</div>
 
             {
-                props.separator && <hr/>
+                props.separator && <hr />
             }
 
             {props.content}
@@ -27,14 +27,14 @@ const Banner = (props: {
 
     const illustration = <>
         <div className={styles.illustration}>
-            <img alt='illustration' src={props.illustration}/>
+            <img alt='illustration' src={props.illustration} />
         </div>
     </>
 
     return <>
         <section className={`${styles.banner} ${props.type === 'reverse' ? styles.reverse : ''}`}>
             <img alt='dots' className={`${styles.dots} ${props.type === 'reverse' ? styles.reverse : ''}`} src={dots}
-                 width={130} height={115}/>
+                width={130} height={115} />
             {
                 props.type === 'reverse' ?
                     <>

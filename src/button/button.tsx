@@ -1,5 +1,5 @@
 import styles from './button.module.scss';
-import {ReactElement} from "react";
+import { ReactElement } from "react";
 
 const Button = (props: {
     text: string,

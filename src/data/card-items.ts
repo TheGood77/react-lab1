@@ -76,4 +76,4 @@ const articlesGridCards: CardItem[] = [
 
 
 
-export {servicesGridCards, articlesGridCards};
+export { servicesGridCards, articlesGridCards };

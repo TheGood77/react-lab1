@@ -1,5 +1,5 @@
 import style from "./card.module.scss";
-import {ReactElement} from "react";
+import { ReactElement } from "react";
 
 const Card = (props: {
     image: string,
@@ -12,7 +12,7 @@ const Card = (props: {
     return <>
         <div className={style.card}>
             <div className={`${style.image} ${props.imageFull ? style.full : ''}`}>
-                <img alt={props.title} src={props.image}/>
+                <img alt={props.title} src={props.image} />
             </div>
             <div className={style.content}>
                 <div className={style.title}>
@@ -22,10 +22,10 @@ const Card = (props: {
                 <div className={style.container}>
                     {props.button}
                     <img className={style.img}
-                         src={props.arrowButton}
-                         width={props.arrowButton ? 15 : 0}
-                         height={props.arrowButton ? 15 : 0}
-                         alt={props.arrowButton}
+                        src={props.arrowButton}
+                        width={props.arrowButton ? 15 : 0}
+                        height={props.arrowButton ? 15 : 0}
+                        alt={props.arrowButton}
                     />
                 </div>
             </div>
